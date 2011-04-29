@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>TypusTest</title>
+  <%= stylesheet_link_tag "main.css", :media => "screen" %>
+  <%= stylesheet_link_tag "skin.css" %>
+  <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js" %>
+  <%= javascript_include_tag "rails" %>
+  <%= javascript_include_tag "jquery.jcarousel.js" %>
+  <%= javascript_include_tag "base.js" %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+<div class="top-fon">
+		<div class="wwide">
+			<div class="wrapper">
+				<!-- header -->
+				<%= render "layouts/header" %>
+				<!-- evd header -->
+				<!-- sidebar -->
+				<div class="sidebar">
+					<%= caterory_list %>
+					<%= render "layouts/catalog_lang_filter" %>
+					<%= site_add_form %>
+				</div>
+				<!-- end sidebar -->
+				<!-- content -->
+				<div class="content">
+					<%= yield %>
+				</div>
+				<!-- end content -->
+			</div>
+		</div>
+		
+		<br style="clear:both">
+				
+		<!-- footer -->
+		<%= render "layouts/footer" %>
+		<!-- end footer -->
+</div>
+    <div class="clr"></div>
+</body>
+</html>

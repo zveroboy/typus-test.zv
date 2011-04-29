@@ -1,0 +1,8 @@
+<div class="fon-bar">
+	<%= t("layout.want_new_tab")%>:
+</div>
+<ul class="sbar">
+	<% @categories.each do |c| %>
+		<li><%= c.name%></li>
+	<% end %>
+</ul>

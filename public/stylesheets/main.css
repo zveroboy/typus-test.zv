@@ -1,0 +1,113 @@
+/*--------------------------------------
+	Author: Strejnev Alexander
+	e-mail: venjerts@gmail.com
+	URL: http://BigDes.com
+----------------------------------------*/
+
+html, body, div, ul, ol, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, fieldset {margin:0;padding:0;}
+h1, h2, h3, h4, h5, h6, pre, code, address, caption, cite, code, table, font {font-size: 1em;font-style: normal;font-weight: normal;}
+/*----------------  H теги ----------------*/
+h1, h2, h3, h4, h5, h6 {font-family: Tahoma, Verdana, Arial, sans-serif;margin: 0 0 0.2em 0;line-height: 1.1em;}
+h1 { font-size: 12px; font-weight: bold; }
+h2 { font-size: 12px; font-weight: bold; line-height: 18px; }
+h3 { font-size: 1em; font-weight: bold; line-height: 16px; }
+h4 { font-size: 10px; font-weight: bold; line-height: 15px; }
+/*---------------- End H теги ----------------*/
+/*----------------  Ссылки ----------------*/
+a { color: #f35603; text-decoration: none; outline: none; }
+a:hover { text-decoration: underline; }
+/*----------------  End Ссылки ----------------*/
+/*----------------  Формы ----------------*/
+input, textarea, select { font-size: 1em; font-family: Tahoma, Verdana, Arial, sans-serif; }
+/*----------------  End Формы ----------------*/
+/*----------------  ************** ----------------*/
+p { padding: 0; margin: 0; margin-bottom: 12px; }
+.clr { clear: both; }
+img  { border:0 none; }
+img.left { float: left; margin: 2px 20px 16px 0; }
+img.right { float: right; margin: 2px 0 16px 20px; }
+hr	{border: 0 none;border-top: 1px solid #cfcfcf;height: 1px;}
+table {	border-collapse: collapse;border-spacing: 0; border: 0px;}
+table td { padding: 0px; }
+/*----------------  UL LI теги ----------------*/
+ul {margin: 0;list-style-position:outside;list-style-image:none;}
+ul li { margin: 0; padding: 0; }
+ol {
+	list-style-image: none;
+	list-style-position: outside;
+	list-style-type: decimal;
+	margin-bottom: 18px;
+	margin-left: 2.2em;
+}
+/*----------------  End UL LI теги ----------------*/
+
+/*----------------  Тело странцицы ----------------*/
+body {
+	color: #000;
+    font-family: Verdana, Tahoma, Arial, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 17px;
+}
+.top-fon {float:left;background:url(../images/rep-x.png) repeat-x 0 0;width:100%}
+/*----------------  Настройка ширины страницы ----------------*/
+*html .wwide { width: expression(document.body.clientWidth) < 1000? "1000px"; }
+.wwide { width: 100%; min-width: 1000px;  }
+.wrapper {margin: auto;width: 1000px;text-align: left;}
+/*----------------  End Настройка ширины страницы ----------------*/
+.header{float:left;width:100%;height:90px}
+.logo {float:left;}
+select.selectBlock{width:135px; font:normal 12px arial;color:#666;margin:28px 0 0 30px}
+ul.about {float:right;margin:28px 0 0 0}
+ul.about li{float:left;list-style:none}
+/*------------------ sidebar -----------------------------------*/
+.sidebar{float:left;width:238px;margin-left:12px;}
+.fon-bar{width:225;height:49px;background:url(../images/fon-bar.png) no-repeat;padding:9px 0 0 45px;font:bold 16px arial; color:#ea6500;text-shadow: 1px 1px 0.02em #fff;}
+ul.sbar{float:left;width:100%;}
+ul.sbar li {background:url(../images/fon-li.png) no-repeat 0 0;padding:9px 0 0 45px;list-style:none;width:100%;height:26px}
+ul.sbar li a{font:normal 15px arial;color:#3b3b3b;text-decoration:none}
+ul.sbar li:hover{background:url(../images/fon-li.png) no-repeat 0 -35px;}
+ul.sbar li:hover a{font:normal 15px arial;color:#ea6500;text-decoration:none}
+.zag-sb{float:left;width:100%;text-align:center;font:bold 16px arial;color:#424243;margin-top:20px}
+.formcheck {float:left;font:normal 12px arial;color:#666;width:90px;margin:15px 0 0 20px}
+.conteinercheckm{float:left;width:225px;height:170px;background:url(../images/bg-m.png) repeat-x 0 0;margin-top:20px}
+.conteinercheckl{width:225px;height:170px;background:url(../images/bg-l.png) no-repeat 0 0;}
+.conteinercheckr{width:200px;height:165px;background:url(../images/bg-r.png) no-repeat 100% 0;padding:5px 0 0 25px}
+.text1{float:left;font:bold 16px arial;color:#ea6500;margin:9px 0 5px 0}
+.intext input{float:left; width:168px;font:normal 12px arial;color:#666;}
+.buttonadd{background:url(../images/buttonadd.png) no-repeat 0 0;width:176px;height:32px;border:none;margin:9px 0 0 -2px;font:normal 12px}
+/*----------------- end sidebar --------------------------------*/
+/*----------------- content --------------------------------*/
+.content{float:left;width:750px}
+.fontop{background:url(../images/fontop.png) no-repeat 0 0;width:100%;height:6px;margin-top:1px}
+.fonmiddle{background:url(../images/fonmiddle.png) repeat-y 0 0;width:750px;height:500px;position:relative}
+.fonbottom{background:url(../images/fonbottom.png) no-repeat 0 0;width:100%;height:6px;}
+.button-tab {position:absolute;top:50%;left:50%;margin:-108px;width:214px;height:216px}
+.text2{width:100%;font:bold 21px arial;color:#636363;margin:15px 0 15px 5px}
+/*----------------- end content --------------------------------*/
+/*----------------- footer --------------------------------*/
+.footer1{float:left;background:url(../images/fon-footer.png) repeat-x ;width:100%;height:150px;}
+.footer-text{font:normal 12px arial;color:#282828;position:absolute;top:95px}
+ul.spisok-footer {position:absolute; top:110px}
+ul.spisok-footer li{float:left;list-style:none;}
+ul.spisok-footer li a{color:#4b91a7;text-decoration:underline}
+ul.spisok-footer li a:hover{text-decoration:none}
+.logowd{float:right;margin:90px 0 0 0}
+/*----------------- end footer --------------------------------*/
+.share-c {float:left;background:url(../images/share-c.png) repeat-x 0 0;}
+.share-l {float:left;background:url(../images/share-l.png) no-repeat 0 0;}
+.share-r {float:left;background:url(../images/share-r.png) no-repeat 100%  0;height:67px}
+.share-r ul {margin:22px 10px 0 120px}
+.share-r li {float:left;/* background:url(../images/share-r.png) no-repeat 100%  0; */list-style:none;margin:0 23px 0 0}
+
+.info-site {margin:15px 0 0 10px;height:50px;width:375px;float:left;}
+.info-site .site-name{color:#f89800;font:16px Tahoma;float:left;padding-right:10px}
+select.selectBlock-kat{width:135px; font:normal 12px arial;color:#666;}
+.rate-it-by {line-height:20px;margin-top:4px;}
+.rate-it-by img {vertical-align:top;margin-left:4px}
+
+.share-it-by {float:right;background:url(../images/share-fon.png) no-repeat 0 5px;margin:20px 0 0 0}
+.share-it-by ul{margin:0 0 0 90px}
+.share-it-by li {float:left;list-style:none;margin:0 3px 0 0 }
+.tab-but {float:left;width:100px;margin:5px 0 0 0;}

@@ -1,0 +1,31 @@
+<div class="conteinercheckm">
+	<div class="conteinercheckl">
+		<div class="conteinercheckr">
+			 <%= error_messages_for :user_site %> 
+			 <%= form_for(@user_site) do |f| %>
+				<div class="text1">
+					I know good site:
+				</div>
+
+				<div class="intext">
+					 <%= f.text_field :url %>
+				</div>
+				<div class="text1">
+					It is about:
+				</div>
+				
+				<select class="selectBlock" style="width:173px;margin:0 0" >								
+					<option value="0">Sport</option>								
+					<option value="1">Games</option>								
+					<option value="2">Fun/Comedy</option>								
+					<option value="3">Extraordinary</option>								
+					<option value="4">Music</option>								
+					<option value="5">Hip Hop</option>								
+				</select>
+				
+				<%= f.submit%>
+				<input type="submit" name="submit" value="Everyone should watch it!" class="buttonadd"/>
+			 <% end %>
+		</div>
+	</div>
+</div>
