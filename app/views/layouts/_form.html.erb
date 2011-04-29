@@ -1,14 +1,13 @@
 <div class="conteinercheckm">
 	<div class="conteinercheckl">
 		<div class="conteinercheckr">
-			 <%= error_messages_for :user_site %> 
-			 <%= form_for(@user_site) do |f| %>
+			 <form>
 				<div class="text1">
 					I know good site:
 				</div>
 
 				<div class="intext">
-					 <%= f.text_field :url %>
+					 <input type="text" />
 				</div>
 				<div class="text1">
 					It is about:
@@ -23,9 +22,8 @@
 					<option value="5">Hip Hop</option>								
 				</select>
 				
-				<%= f.submit%>
 				<input type="submit" name="submit" value="Everyone should watch it!" class="buttonadd"/>
-			 <% end %>
+			 </form>
 		</div>
 	</div>
 </div>
