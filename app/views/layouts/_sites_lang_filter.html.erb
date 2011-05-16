@@ -1,0 +1,18 @@
+<% if @languages.any? then %>
+<div class="zag-sb">
+	<%= t("layout.show_me_websites_in")%>:
+</div>
+<% #Ниже расположенный набор инпутов используется при отправке запроса с пом. кнопки "TAB IT" %>
+<div id="lang_selector">
+	<% @languages.each do |l| %>
+		<div class="formcheck"><label>
+		<% if !session[:lang].blank? then%>
+			<input name="lang[]" type="checkbox" value="<%= l.id%>"<% if session[:lang].include?(l.id) then%> checked<% end%> />
+		<% else%>
+			<input name="lang[]" type="checkbox" value="<%= l.id%>" checked />
+		<% end%>
+			<%= l.name%>
+		</label></div>
+	<% end %>
+</div>
+<% end %>

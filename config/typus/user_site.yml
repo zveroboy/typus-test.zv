@@ -1,0 +1,8 @@
+UserSite:
+  fields:
+    default: url, domain
+  order_by: 
+  relationships: category
+  filters: created_at
+  search: 
+  application: User Sites

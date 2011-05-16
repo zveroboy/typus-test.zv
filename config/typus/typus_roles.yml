@@ -5,3 +5,6 @@
 admin:
   AdminUser: all
   Category: all
+  Language: all
+  Site: all
+  UserSite: all

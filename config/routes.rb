@@ -1,10 +1,18 @@
 TypusTest::Application.routes.draw do
-  get "user_sites/create"
+
+  # get "user_sites/create"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
-
-   match '/about' => 'pages#about'
+  match '/about' 		=> 'pages#about'
+  match '/sign_in' 		=> 'pages#sign_in'
+  match '/sites' 		=> 'sites#index'
+  match '/sites/:id' 	=> 'sites#show'
+  match '/sites/rate/:id'	=> 'sites#rate'
+  match '/user_sites/create' => 'user_sites#create'
+   
+   
+  match '/auth/:provider/callback' => 'sessions#create'
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
@@ -60,6 +68,6 @@ TypusTest::Application.routes.draw do
   # match ':controller(/:action(/:id(.:format)))'
   
   scope :locale, :locale => /en|de/ do
-    resources :categories
+    # resources :categories
   end
 end

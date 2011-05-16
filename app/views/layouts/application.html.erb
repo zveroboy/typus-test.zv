@@ -5,9 +5,12 @@
 <title>TypusTest</title>
   <%= stylesheet_link_tag "main.css", :media => "screen" %>
   <%= stylesheet_link_tag "skin.css" %>
-  <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js" %>
+  <%= stylesheet_link_tag "/javascripts/jquery.ui.stars/jquery.ui.stars.css" %>
+  <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js" %>
+  <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/jquery-ui.min.js" %>
   <%= javascript_include_tag "rails" %>
   <%= javascript_include_tag "jquery.jcarousel.js" %>
+  <%= javascript_include_tag "jquery.ui.stars/jquery.ui.stars.min.js" %>
   <%= javascript_include_tag "base.js" %>
   <%= csrf_meta_tag %>
 </head>
@@ -21,7 +24,7 @@
 				<!-- sidebar -->
 				<div class="sidebar">
 					<%= caterory_list %>
-					<%= render "layouts/catalog_lang_filter" %>
+					<%= sites_lang_filter %>
 					<%= site_add_form %>
 				</div>
 				<!-- end sidebar -->

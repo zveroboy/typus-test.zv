@@ -58,6 +58,7 @@ body {
 /*----------------  End Настройка ширины страницы ----------------*/
 .header{float:left;width:100%;height:90px}
 .logo {float:left;}
+.lang {float:left;}
 select.selectBlock{width:135px; font:normal 12px arial;color:#666;margin:28px 0 0 30px}
 ul.about {float:right;margin:28px 0 0 0}
 ul.about li{float:left;list-style:none}
@@ -65,10 +66,10 @@ ul.about li{float:left;list-style:none}
 .sidebar{float:left;width:238px;margin-left:12px;}
 .fon-bar{width:225;height:49px;background:url(../images/fon-bar.png) no-repeat;padding:9px 0 0 45px;font:bold 16px arial; color:#ea6500;text-shadow: 1px 1px 0.02em #fff;}
 ul.sbar{float:left;width:100%;}
-ul.sbar li {background:url(../images/fon-li.png) no-repeat 0 0;padding:9px 0 0 45px;list-style:none;width:100%;height:26px}
-ul.sbar li a{font:normal 15px arial;color:#3b3b3b;text-decoration:none}
-ul.sbar li:hover{background:url(../images/fon-li.png) no-repeat 0 -35px;}
-ul.sbar li:hover a{font:normal 15px arial;color:#ea6500;text-decoration:none}
+ul.sbar li {background:url(../images/fon-li.png) no-repeat 0 0;padding:9px 0 0 45px;list-style:none;width:100%;height:26px;cursor:pointer;}
+ul.sbar li span{font:normal 15px arial;color:#3b3b3b;text-decoration:none}
+ul.sbar li.selected, ul.sbar li:hover{background:url(../images/fon-li.png) no-repeat 0 -35px;}
+ul.sbar li.selected span, ul.sbar li:hover span{font:normal 15px arial;color:#ea6500;text-decoration:none}
 .zag-sb{float:left;width:100%;text-align:center;font:bold 16px arial;color:#424243;margin-top:20px}
 .formcheck {float:left;font:normal 12px arial;color:#666;width:90px;margin:15px 0 0 20px}
 .conteinercheckm{float:left;width:225px;height:170px;background:url(../images/bg-m.png) repeat-x 0 0;margin-top:20px}
@@ -98,16 +99,40 @@ ul.spisok-footer li a:hover{text-decoration:none}
 .share-c {float:left;background:url(../images/share-c.png) repeat-x 0 0;}
 .share-l {float:left;background:url(../images/share-l.png) no-repeat 0 0;}
 .share-r {float:left;background:url(../images/share-r.png) no-repeat 100%  0;height:67px}
+.share-r .addthis_toolbox {padding:22px 10px 0 120px}
+.share-r .addthis_toolbox .at300b {padding:0 4px}
 .share-r ul {margin:22px 10px 0 120px}
 .share-r li {float:left;/* background:url(../images/share-r.png) no-repeat 100%  0; */list-style:none;margin:0 23px 0 0}
 
-.info-site {margin:15px 0 0 10px;height:50px;width:375px;float:left;}
+.info-site {margin:15px 0 0 10px;height:50px;width:350px;float:left;}
 .info-site .site-name{color:#f89800;font:16px Tahoma;float:left;padding-right:10px}
 select.selectBlock-kat{width:135px; font:normal 12px arial;color:#666;}
 .rate-it-by {line-height:20px;margin-top:4px;}
+.rate-it-by span {float:left;}
 .rate-it-by img {vertical-align:top;margin-left:4px}
 
-.share-it-by {float:right;background:url(../images/share-fon.png) no-repeat 0 5px;margin:20px 0 0 0}
+.share-it-by {float:right;background:url(../images/share-fon.png) no-repeat 0 5px;margin:20px 0 0 0;padding: 0 0 0 88px;}
 .share-it-by ul{margin:0 0 0 90px}
 .share-it-by li {float:left;list-style:none;margin:0 3px 0 0 }
+
+.sign_in {float:right;/* margin:20px 0 0 0 */}
+.sign_in ul{/* margin:0 0 0 90px */}
+.sign_in li {float:left;list-style:none;margin:0 3px 0 0; }
+.sign_in li:first-child {padding:6px 6px 0 0;}
+
 .tab-but {float:left;width:100px;margin:5px 0 0 0;}
+
+/*zveroboy*/
+.clearfix:after, .container:after { content:"\0020";display:block;height:0;clear:both;visibility:hidden;overflow:hidden; }
+.clearfix, .container { display:block; }
+*+html .clearfix, *+html .container { zoom:1; }
+#siteiframe {
+	position:absolute;
+	background:transparent;
+	width:100%;
+	height:100%;
+	top:74px;
+	left:0px;
+	padding:0;
+	z-index: 1;
+}

@@ -6,16 +6,16 @@
 .jcarousel-skin-tango .jcarousel-clip-vertical {width:  75px;height: 245px;
 }
 /* форма еденицы заполнения*/
-.jcarousel-skin-tango .jcarousel-item {position:relative;width:194px;height:200px;}
+.jcarousel-skin-tango .jcarousel-item {position:relative;width:194px;height:200px;text-align:center;}
 .jcarousel-skin-tango .jcarousel-item a{font:normal 12px arial;color:#e6815a;text-decoration:underline;}
-.jcarousel-skin-tango .jcarousel-item  img{border:solid 1px #c9c9c9;position:absolute;top:25px;}
-.jcarousel-skin-tango .jcarousel-item  img.rate {border:0;position:absolute;top:167px;right:10px}
+.jcarousel-skin-tango .jcarousel-item img{border:solid 1px #c9c9c9;margin-top:25px;}
 .jcarousel-skin-tango .jcarousel-item span{position:absolute;top:170px;left:10px}
+.jcarousel-skin-tango .jcarousel-item span.rate {border:0;position:absolute;top:167px;right:10px;left:auto;margin-top:0px;}
 
 /* отступ между формами*/
 .jcarousel-skin-tango .jcarousel-item-horizontal {
 	margin-left: 0;
-    margin-right: 27px;
+    margin-right: 25px;
 }
 
 /*  */

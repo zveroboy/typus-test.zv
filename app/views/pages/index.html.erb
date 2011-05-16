@@ -1,6 +1,8 @@
 <div class="fontop"></div>
 <div class="fonmiddle">
-	<div class="button-tab"><a href="#"><img src="images/tabit-button.png" alt="название сайта" /></a></div>
+	<div class="button-tab">
+		<%= link_to image_tag("tabit-button.png", :alt=>"Tab It!"), sites_path, :id=>"link_to_sites" %>
+	</div>
 </div>
 <div class="fonbottom">
 </div>
@@ -8,37 +10,28 @@
 <div class="share-c">
 	<div class="share-l">
 		<div class="share-r">
-			<ul>
-				<li><a href=""><img src="images/soc/1.png" alt="" /></a></li>
-				<li><a href=""><img src="images/soc/2.png" alt="" /></a></li>
-				<li><a href=""><img src="images/soc/3.png" alt="" /></a></li>
-				<li><a href=""><img src="images/soc/4.png" alt="" /></a></li>
-				<li><a href=""><img src="images/soc/5.png" alt="" /></a></li>
-				<li><a href=""><img src="images/soc/6.png" alt="" /></a></li>
-				<li><a href=""><img src="images/soc/7.png" alt="" /></a></li>
-				<li><a href=""><img src="images/soc/8.png" alt="" /></a></li>
-				<li><a href=""><img src="images/soc/9.png" alt="" /></a></li>
-				<li><a href=""><img src="images/soc/10.png" alt="" /></a></li>
-				<li><a href=""><img src="images/soc/11.png" alt="" /></a></li>
-			</ul>
+			<!-- AddThis Button BEGIN -->
+			<div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+			<a class="addthis_button_preferred_1"></a>
+			<a class="addthis_button_preferred_2"></a>
+			<a class="addthis_button_preferred_3"></a>
+			<a class="addthis_button_preferred_4"></a>
+			<a class="addthis_button_preferred_5"></a>
+			<a class="addthis_button_preferred_6"></a>
+			<a class="addthis_button_preferred_7"></a>
+			<a class="addthis_button_preferred_8"></a>
+			<a class="addthis_button_preferred_9"></a>
+			<a class="addthis_button_preferred_10"></a>
+			<a class="addthis_button_preferred_11"></a>
+			<a class="addthis_button_preferred_12"></a>
+			<a class="addthis_button_compact"></a>
+			<a class="addthis_counter addthis_bubble_style"></a>
+			</div>
+			<script type="text/javascript">var addthis_config = {"data_track_clickback":true};</script>
+			<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4dd0e7a21d1db10b"></script>
+			<!-- AddThis Button END -->
 		</div>
 	</div>
 </div>
 <br style="clear:both">
-<div  class="text2">
-	TAB History:
-</div>
-
-<div class="carusel">
-	<ul id="mycarousel" class="jcarousel-skin-tango">
-		<li><center><a href="">www.webdoka.ru</a><br /><img src="images/prim.jpg" width="192" height="135" alt="" /><span>Rate:</span><img src="images/rating.png" class="rate" alt="" /></center></li>
-		<li><center><a href="">www.webdoka.ru</a><br /><img src="images/prim1.jpg" width="192" height="135" alt="" /><span>Rate:</span><img src="images/rating.png" class="rate" alt="" /></center></li>
-		<li><center><a href="">www.webdoka.ru</a><br /><img src="images/prim.jpg" width="192" height="135" alt="" /><span>Rate:</span><img src="images/rating.png" class="rate" alt="" /></center></li>
-		<li><center><a href="">www.webdoka.ru</a><br /><img src="images/prim1.jpg" width="192" height="135" alt="" /><span>Rate:</span><img src="images/rating.png" class="rate" alt="" /></center></li>
-		<li><center><a href="">www.webdoka.ru</a><br /><img src="images/prim.jpg" width="192" height="135" alt="" /><span>Rate:</span><img src="images/rating.png" class="rate" alt="" /></center></li>
-		<li><center><a href="">www.webdoka.ru</a><br /><img src="images/prim1.jpg" width="192" height="135" alt="" /><span>Rate:</span><img src="images/rating.png" class="rate" alt="" /></center></li>
-		<li><center><a href="">www.webdoka.ru</a><br /><img src="images/prim.jpg" width="192" height="135" alt="" /><span>Rate:</span><img src="images/rating.png" class="rate" alt="" /></center></li>
-		<li><center><a href="">www.webdoka.ru</a><br /><img src="images/prim1.jpg" width="192" height="135" alt="" /><span>Rate:</span><img src="images/rating.png" class="rate" alt="" /></center></li>
-		<li><center><a href="">www.webdoka.ru</a><br /><img src="images/prim.jpg" width="192" height="135" alt="" /><span>Rate:</span><img src="images/rating.png" class="rate" alt="" /></center></li>
-	</ul>
-</div>
+<%= show_history %>

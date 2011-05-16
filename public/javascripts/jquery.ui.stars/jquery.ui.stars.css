@@ -1,0 +1,46 @@
+/*!
+ * jQuery UI Stars v3.0.1
+ * http://plugins.jquery.com/project/Star_Rating_widget
+ *
+ * Copyright (c) 2010 Marek "Orkan" Zajac (orkans@gmail.com)
+ * Dual licensed under the MIT and GPL licenses.
+ * http://docs.jquery.com/License
+ *
+ * $Rev: 164 $
+ * $Date:: 2010-05-01 #$
+ * $Build: 35 (2010-05-01)
+ *
+ */
+.ui-stars-star,
+.ui-stars-cancel {
+  float: left;
+  display: block;
+  overflow: hidden;
+  text-indent: -999em;
+  cursor: pointer; 
+  margin: 0 0 0 2px;
+}
+.ui-stars-star a,
+.ui-stars-cancel a {
+  width: 22px;
+  height: 23px;
+  display: block;
+  background: url(../../images/star_full.png) no-repeat 0 0;
+}
+.ui-stars-star a {
+  background:url(../../images/star_empty.png) no-repeat 0 0;
+}
+.ui-stars-star-on a {
+  background: url(../../images/star_full.png) no-repeat 0 0;
+}
+.ui-stars-star-hover a {
+  background:url(../../images/star_full.png) no-repeat 0 0;
+}
+.ui-stars-cancel-hover a {
+  background:red;
+}
+.ui-stars-star-disabled,
+.ui-stars-star-disabled a,
+.ui-stars-cancel-disabled a {
+  cursor: default !important;
+}

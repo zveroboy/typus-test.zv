@@ -1,29 +1,25 @@
 <div class="conteinercheckm">
 	<div class="conteinercheckl">
 		<div class="conteinercheckr">
-			 <form>
+			<%= form_for @user_site, :url => {:controller=>"user_sites", :action => "create" } do |f| %>
+				<%= errors_for(@user_site).html_safe %>
 				<div class="text1">
-					I know good site:
+					<%= t("layout.i_know_good_site") %>:
 				</div>
 
 				<div class="intext">
-					 <input type="text" />
+					 <%= f.text_field :url %>
 				</div>
 				<div class="text1">
-					It is about:
+					<%= t("layout.it is about") %>:
 				</div>
 				
-				<select class="selectBlock" style="width:173px;margin:0 0" >								
-					<option value="0">Sport</option>								
-					<option value="1">Games</option>								
-					<option value="2">Fun/Comedy</option>								
-					<option value="3">Extraordinary</option>								
-					<option value="4">Music</option>								
-					<option value="5">Hip Hop</option>								
-				</select>
+				<!-- <select class="selectBlock" style="width:173px;margin:0 0" >	 -->
+				<% categories_array = @categories.all.map { |c| [c.name, c.id] } %>							
+				<%= f.select (:category_id, categories_array, {:class => "selectBlock", :style =>"width:173px;margin:0 0"}) %>
 				
-				<input type="submit" name="submit" value="Everyone should watch it!" class="buttonadd"/>
-			 </form>
+				<%= f.submit "Everyone should watch it", :class =>"buttonadd" %>
+			<% end %>
 		</div>
 	</div>
 </div>

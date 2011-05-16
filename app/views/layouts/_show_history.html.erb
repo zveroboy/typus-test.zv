@@ -1,0 +1,24 @@
+<% if @sites.any? then %>
+<div class="text2">
+	<%= t("layout.tab_history")%>:
+</div>
+<div class="carusel">
+	<ul id="mycarousel" class="jcarousel-skin-tango">
+		<% @sites.each do |s| %>
+			<li>
+				<%= link_to s.name, :controller => "sites", :action => "show", :id => s.id%><br /><%= image_tag s.picture.url(:small) %>
+				<span><%= t("layout.rate")%>:</span>
+				<span class="rate">
+					<select disabled>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+					</select>
+				</span>
+			</li>
+		<% end %>
+	</ul>
+</div>
+<% end %>

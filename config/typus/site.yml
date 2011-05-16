@@ -1,0 +1,9 @@
+Site:
+  fields:
+    default: name, active, url, picture
+    form: active, name, url, picture
+  order_by: 
+  relationships: categories, languages
+  filters: created_at
+  search: name
+  application: Sites

@@ -1,7 +1,7 @@
 Category:
   fields:
-    default: active, name
+    default: id, active, name
     list: id, active, name
     form: active, name
-  application: Category
+  application: Categories
   description: Categories Administration

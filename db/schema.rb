@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110429152626) do
+ActiveRecord::Schema.define(:version => 20110516032529) do
 
   create_table "admin_users", :force => true do |t|
     t.string   "first_name",       :default => "",    :null => false
@@ -35,6 +35,11 @@ ActiveRecord::Schema.define(:version => 20110429152626) do
     t.datetime "updated_at"
   end
 
+  create_table "categories_sites", :id => false, :force => true do |t|
+    t.integer "site_id"
+    t.integer "category_id"
+  end
+
   create_table "category_translations", :force => true do |t|
     t.integer  "category_id"
     t.string   "locale"
@@ -45,10 +50,60 @@ ActiveRecord::Schema.define(:version => 20110429152626) do
 
   add_index "category_translations", ["category_id"], :name => "index_category_translations_on_category_id"
 
-  create_table "user_sites", :force => true do |t|
-    t.string   "domain"
+  create_table "language_translations", :force => true do |t|
+    t.integer  "language_id"
+    t.string   "locale"
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "language_translations", ["language_id"], :name => "index_language_translations_on_language_id"
+
+  create_table "languages", :force => true do |t|
+    t.string   "name"
+    t.boolean  "active"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "languages_sites", :id => false, :force => true do |t|
+    t.integer "site_id"
+    t.integer "language_id"
+  end
+
+  create_table "ratings", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "site_id"
+    t.integer  "value"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "sites", :force => true do |t|
+    t.string   "name"
+    t.boolean  "active"
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.string   "url"
     t.integer  "category_id"
+    t.string   "picture_file_name"
+    t.string   "picture_content_type"
+    t.integer  "picture_file_size"
+    t.datetime "picture_updated_at"
+    t.integer  "language_id"
+  end
+
+  create_table "user_sites", :force => true do |t|
+    t.string   "url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "category_id"
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

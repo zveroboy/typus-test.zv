@@ -4,5 +4,14 @@
 en:
   layout: 
     want_new_tab: "I want to tab in"
+    show_me_websites_in: "Show me websites in"
+    sign_in_with: "Sign in with"
+    sign_out: "Sign Out"
+    welcome: "Welcome"
+    rate: "Rate"
+    rate_it_by: "Rate it by"
+    tab_history: "TAB History"
+    i_know_good_site: "I know good site"
+    it_is_about: "It is about"
   user_side: 
     invalid_url: "Invalid link format!"

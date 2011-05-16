@@ -1,0 +1,13 @@
+<div class="sign_in">
+	<% if current_user %>  
+		<%= t("layout.welcome")%>, <%= current_user.name %>!  
+		<%= link_to t("layout.welcome"), signout_path %>  
+	<% else %>  
+		<ul>
+			<li><%= t("layout.sign_in_with")%>:</li>
+			<li><%= link_to image_tag("soc/1.png"), "/auth/twitter" %></li>
+			<li><%= link_to image_tag("soc/2.png"), "/auth/facebook" %></li>
+			<li><%= link_to image_tag("soc/3.png"), "/auth/vkontakte" %></li>
+		</ul>
+	<% end %>
+</div>

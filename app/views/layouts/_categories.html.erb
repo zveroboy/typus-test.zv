@@ -1,8 +1,11 @@
+<% if @categories.any? then %>
 <div class="fon-bar">
 	<%= t("layout.want_new_tab")%>:
 </div>
-<ul class="sbar">
+<% #Ниже расположенный селектор используется при отправке запроса с пом. кнопки "TAB IT" %>
+<ul id="category_selector" class="sbar">
 	<% @categories.each do |c| %>
-		<li><%= c.name%></li>
+		<% if c.sites.any? then %><li<% if !session[:cat].blank? && session[:cat].include?(c.id) then%> class="selected"<% end%>><span><%= c.name%></span><input name="cat" type="hidden" value="<%= c.id%>" /></li><% end %>
 	<% end %>
 </ul>
+<% end %>

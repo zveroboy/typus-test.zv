@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.6'
+gem 'rails', '~> 3.0'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -10,6 +10,8 @@ gem 'sqlite3'
 #Additionals
 gem 'typus', :git => 'https://github.com/fesplugas/typus.git'
 gem 'globalize3'
+gem 'paperclip', '~> 2.3'
+gem 'omniauth'
 
 # Use unicorn as the web server
 # gem 'unicorn'

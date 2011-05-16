@@ -1,5 +1,14 @@
 de:
   layout: 
     want_new_tab: "Ich möchte Registerkarte"
+    show_me_websites_in: "Zeige mir Webseiten in"
+    sign_in_with: "Melden Sie sich mit"
+    sign_out: "Registriere Out"
+    welcome: "Willkommen"
+    rate: "BewertenBewerten"
+    rate_it_by: "Bewerten Sie es durch"
+    tab_history: "TAB Historie"
+    i_know_good_site: "Ich weiß, gute Seite"
+    it_is_about: "Es geht darum"
   user_side: 
     invalid_url: "Ungultiger Link-Format!"

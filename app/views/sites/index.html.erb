@@ -1,0 +1,41 @@
+<div class="info-site">
+
+	<div class="site-name"><span><%= @site.name%></span></div>	
+	
+	<%= form_tag( {:action => "index", :id => @site.id} ) do %>
+		<select class="selectBlock-kat">
+			<% @site.categories.each do |c| %>
+				<option name= value="<%= c.id%>"<% if session[:cat].include?(c.id) then%> selected<% end%>><%= c.name%></option>
+			<% end %>
+		</select>
+	<% end %>
+	
+	<div class="rate-it-by">
+		<%= form_tag( {:action => "rate", :id => @site.id} ) do %>
+			<div id="star_rating" class="clearfix">
+				<span><%= t("layout.rate_it_by")%>:</span>
+				<%= select_tag "rating", options_for_select([ ["1", "1"], ["2", "2"], ["3", "3"], ["4", "4"], ["5", "5"] ], "3") %>
+			</div>
+		<% end %>
+	</div>
+
+</div>
+
+<%= link_to image_tag("tabit-button2.png", :alt => "Tab It!"), :action => "show", :id => @next.id %>
+
+<div class="share-it-by">
+	<!-- AddThis Button BEGIN -->
+	<div class="addthis_toolbox addthis_default_style addthis_32x32_style" addthis:url="<%= @site.url %>">
+		<a class="addthis_button_preferred_1"></a>
+		<a class="addthis_button_preferred_2"></a>
+		<a class="addthis_button_compact"></a>
+		<a class="addthis_counter addthis_bubble_style"></a>
+	</div>
+	<script type="text/javascript">var addthis_config = {"data_track_clickback":true};</script>
+	<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4dd0e7a21d1db10b"></script>
+	<!-- AddThis Button END -->
+</div>	
+
+<% content_for :url do %>
+<%= @site.url %>
+<% end %>
