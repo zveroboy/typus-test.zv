@@ -11,4 +11,5 @@ de:
     i_know_good_site: "Ich weiß, gute Seite"
     it_is_about: "Es geht darum"
   user_side: 
-    invalid_url: "Ungultiger Link-Format!"
+    invalid_url: "ungültiges Format!"
+    notice: "Ihre Website wurde erfolgreich hinzugefügt."

@@ -27,9 +27,9 @@ class SitesController < ApplicationController
 	# logger.debug "params[:id]: #{params[:id].to_i}"
 	cur_index = 0
 	sites.each_with_index do |s, i|
-	  logger.debug "i: #{i}"
-	  logger.debug "s.id: #{s.id}"
-	  logger.debug "b: #{params[:id].to_i == s.id}"
+	  # logger.debug "i: #{i}"
+	  # logger.debug "s.id: #{s.id}"
+	  # logger.debug "b: #{params[:id].to_i == s.id}"
 	  cur_index = i if params[:id].to_i == s.id
 	  @site = s if params[:id].to_i == s.id
       @site_categories = s if params[:id].to_i == s.id

@@ -2,13 +2,27 @@
 	<div class="conteinercheckl">
 		<div class="conteinercheckr">
 			<%= form_for @user_site, :url => {:controller=>"user_sites", :action => "create" } do |f| %>
-				<%= errors_for(@user_site).html_safe %>
+				<% unless flash[:user_site].blank? %>
+					<% if !flash[:user_site][:errors].blank? %>
+						<div class="error">
+						  <ul>
+						  <% flash[:user_site][:errors].full_messages.each do |msg| %>
+							<li><%= msg %></li>
+						  <% end %>
+						  </ul>
+						</div>
+					<% elsif !flash[:user_site][:notice].blank? %>
+						<div class="notice">
+						  <%= flash[:user_site][:notice] %>
+						</div>
+					<% end %>
+				<% end %>
 				<div class="text1">
 					<%= t("layout.i_know_good_site") %>:
 				</div>
 
 				<div class="intext">
-					 <%= f.text_field :url %>
+					<%= f.text_field :url %>
 				</div>
 				<div class="text1">
 					<%= t("layout.it is about") %>:
@@ -16,7 +30,7 @@
 				
 				<!-- <select class="selectBlock" style="width:173px;margin:0 0" >	 -->
 				<% categories_array = @categories.all.map { |c| [c.name, c.id] } %>							
-				<%= f.select (:category_id, categories_array, {:class => "selectBlock", :style =>"width:173px;margin:0 0"}) %>
+				<%= f.select (:category_id, categories_array, {:class => "selectBlock"}) %>
 				
 				<%= f.submit "Everyone should watch it", :class =>"buttonadd" %>
 			<% end %>

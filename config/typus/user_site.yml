@@ -2,6 +2,8 @@ UserSite:
   fields:
     default: url, domain
   order_by: 
+  actions:
+    index: show_top
   relationships: category
   filters: created_at
   search: 

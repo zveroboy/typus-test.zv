@@ -136,3 +136,5 @@ select.selectBlock-kat{width:135px; font:normal 12px arial;color:#666;}
 	padding:0;
 	z-index: 1;
 }
+.error {color:red;}
+.notice {color:green;}

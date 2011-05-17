@@ -1,11 +1,18 @@
 class UserSitesController < ApplicationController
+  # def new
+    # @user_site = UserSite.new
+    # @categories = Category.where(:active=>true)
+    # render "layouts/form"
+  # end
+
   def create
 	@user_site = UserSite.new(params[:user_site]) 
-	# raise @user_site.to_yaml
     if @user_site.save 
-	  redirect_to(root_path, :notice => 'Site was successfully updated.')
+	  redirect_to(root_path, :flash => { :user_site => { :notice => I18n.t("user_side.notice") } } )
     else
-      redirect_to(root_path, :notice => @user.errors.to_s)
+	# raise @user_site.errors.to_yaml
+	  # flash[:user_site] = @user_site.errors
+      redirect_to(root_path, :flash => { :user_site => { :errors => @user_site.errors } } )
     end 
   end
 end

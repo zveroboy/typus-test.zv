@@ -14,4 +14,5 @@ en:
     i_know_good_site: "I know good site"
     it_is_about: "It is about"
   user_side: 
-    invalid_url: "Invalid link format!"
+    invalid_url: "invalid format!"
+    notice: "Your site was successfully added."
